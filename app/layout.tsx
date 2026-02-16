@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { TrailerProvider } from "./components/TrailerProvider";
 
 export const metadata: Metadata = {
   title: "Movie List",
@@ -14,14 +15,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-slate-900 text-slate-100 antialiased">
-        <header className="border-b border-slate-700 px-6 py-4">
-          <nav className="flex gap-6">
-            <a href="/" className="text-slate-200 hover:text-white">
-              Top Movies
-            </a>
-          </nav>
-        </header>
-        <main className="px-6 py-8">{children}</main>
+        <TrailerProvider>
+          <header className="border-b border-slate-700 px-6 py-4">
+            <nav className="flex gap-6">
+              <a href="/" className="text-slate-200 hover:text-white">
+                Top Movies
+              </a>
+            </nav>
+          </header>
+          <main className="px-6 py-8">{children}</main>
+        </TrailerProvider>
       </body>
     </html>
   );
