@@ -3,8 +3,15 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getMovieById, getRatingColor } from "@/data/movies";
 import { TrailerButton } from "@/app/components/TrailerButton";
+import { TrailerAutoPlayer } from "@/app/components/TrailerAutoPlayer";
 
-export default function MoviePage({ params }: { params: { id: string } }) {
+export default function MoviePage({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { trailer?: string };
+}) {
   const movie = getMovieById(params.id);
 
   if (!movie) {
@@ -57,9 +64,16 @@ export default function MoviePage({ params }: { params: { id: string } }) {
           </div>
         </div>
         {movie.trailerUrl && (
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <TrailerButton trailerUrl={movie.trailerUrl} movieTitle={movie.title} />
-          </div>
+          <>
+            <TrailerAutoPlayer
+              trailerUrl={movie.trailerUrl}
+              movieTitle={movie.title}
+              autoPlay={searchParams?.trailer === "true"}
+            />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <TrailerButton trailerUrl={movie.trailerUrl} movieTitle={movie.title} />
+            </div>
+          </>
         )}
       </div>
 
