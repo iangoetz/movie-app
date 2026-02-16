@@ -21,4 +21,5 @@ export const topMovies: Movie[] = [
   { id: "8", title: "Goodfellas", year: 1990, rating: 8.7, description: "The story of Henry Hill and his life in the mob, covering his relationship with his wife and his partners in crime.", posterPath: "/aKuFiU82s5ISJpGg7Ds1SSheOPG.jpg", youtubeTrailerId: "2ilzidi_J8Q" },
   { id: "9", title: "Interstellar", year: 2014, rating: 8.7, description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.", posterPath: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg", youtubeTrailerId: "zSWdZVtXT7E" },
   { id: "10", title: "The Silence of the Lambs", year: 1991, rating: 8.6, description: "A young F.B.I. cadet must receive the help of an incarcerated cannibal killer to catch another serial killer.", posterPath: "/uS9m8OBk1A8eM9Ivhbx8tRQqTau.jpg", youtubeTrailerId: "6iF9BfTjT_c" },
+  { id: "11", title: "Shrek", year: 2001, rating: 7.9, description: "A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.", posterPath: "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg", youtubeTrailerId: "CwXOrWvPBPk" },
 ];
