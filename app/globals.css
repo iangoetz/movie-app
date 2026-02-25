@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #0c0c0f;
+  --background: #0c0c0e;
   --foreground: #f5f5f0;
   --card: #16161a;
   --accent: #e8c547;
   --muted: #6b6b70;
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+.safe-area-bottom {
+  padding-bottom: var(--safe-area-bottom);
 }
